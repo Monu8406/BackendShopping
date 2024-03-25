@@ -4,9 +4,11 @@ const app = express();
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const multer = require('multer');
-const path = require('path');
+
 const paymentRoutes = require("./payment.js");
 const cors = require('cors');
+
+const path = require('path');
 require('dotenv').config({path:'.env'}); 
 app.use(express.json());
 app.use(cors());

@@ -2,6 +2,8 @@ const router = require("express").Router();
 const Razorpay = require("razorpay");
 const crypto = require("crypto");
 
+const path = require('path');
+require('dotenv').config({path:'.env'}); 
 router.post("/orders", async (req, res) => {
 	try {
 		const instance = new Razorpay({
